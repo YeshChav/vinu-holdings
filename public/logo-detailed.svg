@@ -1,0 +1,68 @@
+<svg width="300" height="180" viewBox="0 0 300 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="300" height="180" fill="#000000"/>
+  
+  <!-- VH Monogram -->
+  <g transform="translate(150, 45)">
+    <!-- V Letter (larger, primary) -->
+    <path d="M-30 -12 L-18 30 L-6 -12 L6 30 L18 -12 L12 -18 L6 18 L-6 18 L-12 -18 Z" 
+          fill="url(#goldGradient)" 
+          stroke="url(#goldStroke)" 
+          stroke-width="0.5"/>
+    
+    <!-- H Letter (integrated with V) -->
+    <path d="M24 -12 L24 30 L30 30 L30 12 L42 12 L42 30 L48 30 L48 -12 L42 -12 L42 6 L30 6 L30 -12 Z" 
+          fill="url(#goldGradient)" 
+          stroke="url(#goldStroke)" 
+          stroke-width="0.5"/>
+  </g>
+  
+  <!-- VINU Text -->
+  <text x="150" y="105" text-anchor="middle" 
+        font-family="'Times New Roman', 'Georgia', serif" 
+        font-size="28" 
+        font-weight="bold" 
+        fill="url(#goldGradient)" 
+        stroke="url(#goldStroke)" 
+        stroke-width="0.3">
+    VINU
+  </text>
+  
+  <!-- HOLDINGS Text -->
+  <text x="150" y="135" text-anchor="middle" 
+        font-family="'Times New Roman', 'Georgia', serif" 
+        font-size="22" 
+        font-weight="bold" 
+        fill="url(#goldGradient)" 
+        stroke="url(#goldStroke)" 
+        stroke-width="0.3">
+    HOLDINGS
+  </text>
+  
+  <!-- Gold Gradient and Effects -->
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="20%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#DAA520;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#B8860B;stop-opacity:1" />
+      <stop offset="80%" style="stop-color:#8B6914;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#654321;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="goldStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFA500;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#8B6914;stop-opacity:0.8" />
+    </linearGradient>
+    
+    <!-- Embossed effect filter -->
+    <filter id="emboss" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.8"/>
+      <feSpecularLighting result="specOut" in="blur" specularConstant="1.5" specularExponent="20" lighting-color="#FFD700">
+        <fePointLight x="-50" y="-50" z="200"/>
+      </feSpecularLighting>
+      <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"/>
+      <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+    </filter>
+  </defs>
+</svg>

@@ -1,6 +1,8 @@
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/sections/Footer';
 
+// Trigger new deployment
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-900">

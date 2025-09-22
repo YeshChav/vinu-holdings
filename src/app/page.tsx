@@ -1,6 +1,7 @@
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/sections/Footer';
 
+
 // Trigger new deployment
 
 export default function Home() {
@@ -108,7 +109,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-yellow-500 mb-4">Our Ventures</h2>
             <p className="text-xl text-yellow-200 max-w-3xl mx-auto">
-              Beyond investments, we're building innovative businesses that create value and serve communities.
+              Beyond investments, we&apos;re building innovative businesses that create value and serve communities.
             </p>
           </div>
           

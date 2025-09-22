@@ -17,13 +17,23 @@ const Logo: React.FC<LogoProps> = ({
   variant = 'full',
   color = 'gold',
 }) => {
+  // Determine logo source based on variant
+  const logoSrc = variant === 'monogram' ? '/logo.svg' : '/logo-detailed.svg';
+  
+  // Apply color-based styling
+  const colorClasses = {
+    gold: 'filter brightness-0 saturate-100',
+    white: 'filter brightness-0 invert',
+    black: 'filter brightness-0'
+  };
+
   return (
     <img
-      src="/logo.svg"
+      src={logoSrc}
       alt={`${SITE_CONFIG.name} Logo`}
       width={width}
       height={height}
-      className={cn('logo', className)}
+      className={cn('logo', colorClasses[color], className)}
     />
   );
 };

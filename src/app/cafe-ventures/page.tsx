@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/sections/Footer';
 
+
 export default function CafeVentures() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-100">
@@ -144,21 +145,21 @@ export default function CafeVentures() {
             <div className="bg-white p-8 rounded-xl shadow-lg text-center">
               <div className="w-16 h-16 bg-orange-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Phase 1: Milan</h3>
-              <p className="text-gray-600 mb-4">Launching our flagship location in the heart of Milan's business district.</p>
+              <p className="text-gray-600 mb-4">Launching our flagship location in the heart of Milan&apos;s business district.</p>
               <div className="text-sm text-orange-600 font-semibold">Status: Planning</div>
             </div>
             
             <div className="bg-white p-8 rounded-xl shadow-lg text-center">
               <div className="w-16 h-16 bg-orange-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Phase 2: Rome</h3>
-              <p className="text-gray-600 mb-4">Expanding to Rome's historic center and tourist areas.</p>
+              <p className="text-gray-600 mb-4">Expanding to Rome&apos;s historic center and tourist areas.</p>
               <div className="text-sm text-orange-600 font-semibold">Status: Research</div>
             </div>
             
             <div className="bg-white p-8 rounded-xl shadow-lg text-center">
               <div className="w-16 h-16 bg-orange-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Phase 3: Florence</h3>
-              <p className="text-gray-600 mb-4">Bringing our café experience to Florence's cultural district.</p>
+              <p className="text-gray-600 mb-4">Bringing our café experience to Florence&apos;s cultural district.</p>
               <div className="text-sm text-orange-600 font-semibold">Status: Future</div>
             </div>
           </div>
@@ -171,7 +172,7 @@ export default function CafeVentures() {
           <div className="bg-gradient-to-r from-orange-600 to-amber-600 rounded-2xl p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Investment Opportunity</h2>
             <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">
-              Join us in bringing authentic Italian café culture to new markets. We're seeking strategic partners and investors to help scale our vision.
+              Join us in bringing authentic Italian café culture to new markets. We&apos;re seeking strategic partners and investors to help scale our vision.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">

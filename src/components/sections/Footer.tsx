@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { COMPANY_INFO, SOCIAL_LINKS, VENTURES } from '@/constants';
 import Logo from '@/components/ui/Logo';
 
+
 const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white py-12">

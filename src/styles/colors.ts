@@ -69,8 +69,8 @@ export const COLORS = {
 // 🎯 VENTURE-SPECIFIC COLOR SCHEMES
 export const VENTURE_COLORS = {
   strategic: {
-    primary: COLORS.indigo,
-    secondary: COLORS.purple,
+    primary: COLORS.accent.indigo,
+    secondary: COLORS.accent.purple,
     accent: COLORS.accent.indigo,
     background: 'from-slate-50 via-gray-50 to-indigo-100'
   },

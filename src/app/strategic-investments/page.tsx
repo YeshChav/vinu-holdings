@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/sections/Footer';
 
+
 export default function StrategicInvestments() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-indigo-100">
@@ -199,7 +200,7 @@ export default function StrategicInvestments() {
           <div className="bg-indigo-600 rounded-2xl p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Partner with Us?</h2>
             <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
-              If you're a company seeking strategic investment or an investor looking to partner with us, we'd love to hear from you.
+              If you&apos;re a company seeking strategic investment or an investor looking to partner with us, we&apos;d love to hear from you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/#contact" className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">

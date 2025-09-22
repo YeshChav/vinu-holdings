@@ -2,13 +2,11 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { NAV_ITEMS, VENTURES } from '@/constants';
 import Logo from '@/components/ui/Logo';
 
 export default function Navigation() {
   const [isVenturesOpen, setIsVenturesOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isHovering, setIsHovering] = useState(false);
   const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null);
 
   // Cleanup timeout on unmount
@@ -63,7 +61,6 @@ export default function Navigation() {
               <div 
                 className="relative"
                 onMouseEnter={() => {
-                  setIsHovering(true);
                   setIsVenturesOpen(true);
                   if (hoverTimeout) {
                     clearTimeout(hoverTimeout);
@@ -71,7 +68,6 @@ export default function Navigation() {
                   }
                 }}
                 onMouseLeave={() => {
-                  setIsHovering(false);
                   const timeout = setTimeout(() => {
                     setIsVenturesOpen(false);
                   }, 150); // Small delay to allow cursor to move to dropdown

@@ -28,6 +28,7 @@ const Logo: React.FC<LogoProps> = ({
   };
 
   return (
+    // eslint-disable-next-line @next/next/no-img-element
     <img
       src={logoSrc}
       alt={`${SITE_CONFIG.name} Logo`}

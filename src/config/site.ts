@@ -21,15 +21,15 @@ export const SITE_CONFIG = {
   logo: {
     default: {
       width: 500,
-      height: 300
+      height: 400
     },
     navigation: {
       width: 250,
-      height: 300
+      height: 400
     },
     footer: {
       width: 500,
-      height: 300
+      height: 400
     }
   },
 

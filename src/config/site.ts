@@ -24,8 +24,8 @@ export const SITE_CONFIG = {
       height: 400
     },
     navigation: {
-      width: 250,
-      height: 400
+      width: 500,
+      height: 600
     },
     footer: {
       width: 500,
@@ -39,7 +39,7 @@ export const SITE_CONFIG = {
       height: "h-36"
     },
     hero: {
-      padding: "pt-24 sm:pt-26 md:pt-28"
+      padding: "pt-36 sm:pt-38 md:pt-40"
     }
   },
 

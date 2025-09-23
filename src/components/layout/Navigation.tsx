@@ -21,16 +21,16 @@ export default function Navigation() {
   return (
     <nav className="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24">
+        <div className="flex justify-between items-center h-32">
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center hover:opacity-80 transition-opacity duration-200">
               <Logo 
-                width={250} 
-                height={300} 
+                width={500} 
+                height={600} 
                 variant="full" 
                 color="gold"
-                className="h-16 sm:h-20 md:h-36 lg:h-28 w-auto"
+                className="h-32 sm:h-40 md:h-48 lg:h-56 w-auto"
               />
             </Link>
           </div>

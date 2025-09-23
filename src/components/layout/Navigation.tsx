@@ -30,7 +30,7 @@ export default function Navigation() {
                 height={600} 
                 variant="full" 
                 color="gold"
-                className="h-36 sm:h-40 md:h-48 lg:h-56 w-auto"
+                className="h-48 sm:h-52 md:h-56 lg:h-60 w-auto -ml-4 sm:-ml-6 md:-ml-8 lg:-ml-10"
               />
             </Link>
           </div>
@@ -38,25 +38,6 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-1">
-              <Link 
-                href="/" 
-                className="text-gray-700 hover:text-blue-600 px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 hover:bg-blue-50"
-              >
-                Home
-              </Link>
-              <Link 
-                href="/#about" 
-                className="text-gray-700 hover:text-blue-600 px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 hover:bg-blue-50"
-              >
-                About
-              </Link>
-              <Link 
-                href="/#investments" 
-                className="text-gray-700 hover:text-blue-600 px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 hover:bg-blue-50"
-              >
-                Investments
-              </Link>
-              
               {/* Ventures Dropdown */}
               <div 
                 className="relative"
@@ -176,28 +157,6 @@ export default function Navigation() {
         {isMobileMenuOpen && (
           <div className="md:hidden bg-white border-t border-gray-100">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <Link 
-                href="/" 
-                className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Home
-              </Link>
-              <Link 
-                href="/#about" 
-                className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                About
-              </Link>
-              <Link 
-                href="/#investments" 
-                className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Investments
-              </Link>
-              
               {/* Mobile Ventures Section */}
               <div className="px-3 py-2">
                 <div className="text-sm font-medium text-gray-500 mb-2">Ventures</div>

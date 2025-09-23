@@ -24,19 +24,19 @@ export const SITE_CONFIG = {
       height: 300
     },
     navigation: {
-      width: 350,
-      height: 120
+      width: 400,
+      height: 200
     },
     footer: {
-      width: 400,
-      height: 160
+      width: 500,
+      height: 300
     }
   },
 
   // Layout Configuration
   layout: {
     navigation: {
-      height: "h-24"
+      height: "h-36"
     },
     hero: {
       padding: "pt-24 sm:pt-26 md:pt-28"

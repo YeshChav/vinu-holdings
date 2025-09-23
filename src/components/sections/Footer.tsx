@@ -12,11 +12,11 @@ const Footer: React.FC = () => {
           <div>
             <div className="mb-4">
               <Logo 
-                width={300} 
-                height={120} 
+                width={400} 
+                height={160} 
                 variant="full" 
                 color="gold"
-                className="h-24 w-auto"
+                className="h-28 sm:h-32 md:h-36 w-auto"
               />
             </div>
             <p className="text-gray-400">

@@ -20,26 +20,26 @@ export const SITE_CONFIG = {
   // Logo Configuration
   logo: {
     default: {
-      width: 400,
-      height: 240
+      width: 500,
+      height: 300
     },
     navigation: {
-      width: 250,
-      height: 80
+      width: 350,
+      height: 120
     },
     footer: {
-      width: 300,
-      height: 120
+      width: 400,
+      height: 160
     }
   },
 
   // Layout Configuration
   layout: {
     navigation: {
-      height: "h-20"
+      height: "h-24"
     },
     hero: {
-      padding: "pt-20 sm:pt-22 md:pt-24"
+      padding: "pt-24 sm:pt-26 md:pt-28"
     }
   },
 

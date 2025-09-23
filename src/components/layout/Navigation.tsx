@@ -26,8 +26,8 @@ export default function Navigation() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center hover:opacity-80 transition-opacity duration-200">
               <Logo 
-                width={400} 
-                height={200} 
+                width={250} 
+                height={300} 
                 variant="full" 
                 color="gold"
                 className="h-16 sm:h-20 md:h-36 lg:h-28 w-auto"

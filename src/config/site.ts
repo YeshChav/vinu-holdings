@@ -36,10 +36,10 @@ export const SITE_CONFIG = {
   // Layout Configuration
   layout: {
     navigation: {
-      height: "h-36"
+      height: "h-16"
     },
     hero: {
-      padding: "pt-36 sm:pt-38 md:pt-40"
+      padding: "pt-20 sm:pt-22 md:pt-24"
     }
   },
 

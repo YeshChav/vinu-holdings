@@ -30,8 +30,8 @@ export default function Navigation() {
                 height={180} 
                 variant="full" 
                 color="gold"
-                className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto -ml-2 sm:-ml-3 md:-ml-4 lg:-ml-5"
-              />
+                className="h-28 sm:h-32 md:h-36 lg:h-40 w-auto -ml-2 sm:-ml-3 md:-ml-4 lg:-ml-5"
+                />
             </Link>
           </div>
 

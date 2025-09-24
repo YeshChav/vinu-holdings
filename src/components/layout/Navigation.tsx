@@ -27,10 +27,10 @@ export default function Navigation() {
             <Link href="/" className="flex items-center hover:opacity-80 transition-opacity duration-200">
               <Logo 
                 width={200} 
-                height={120} 
+                height={200} 
                 variant="full" 
                 color="gold"
-                className="h-12 sm:h-14 md:h-16 lg:h-18 w-auto"
+                className="h-12 sm:h-14 md:h-16 lg:h-18 w-auto -ml-2 sm:-ml-3 md:-ml-4 lg:-ml-5"
               />
             </Link>
           </div>

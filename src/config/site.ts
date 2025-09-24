@@ -24,8 +24,8 @@ export const SITE_CONFIG = {
       height: 400
     },
     navigation: {
-      width: 200,
-      height: 200
+      width: 300,
+      height: 180
     },
     footer: {
       width: 500,

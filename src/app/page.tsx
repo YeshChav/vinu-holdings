@@ -15,11 +15,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Building Great<br />
-              <span className="text-blue-600">Companies</span>
+              Building Enduring Value Through<br />
+              <span className="text-blue-600">Investments & Innovation</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Vinu Holdings combines strategic investments, innovative ventures, and real estate development to create lasting value and growth opportunities.
+              Vinu Holdings is a diversified investment company focused on public markets, private equity, and real estate opportunities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">

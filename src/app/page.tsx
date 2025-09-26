@@ -1,12 +1,16 @@
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/sections/Footer';
+import StructuredData from '@/components/seo/StructuredData';
 
 
 // Trigger new deployment
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-blue-100">
+    <>
+      <StructuredData type="Organization" />
+      <StructuredData type="WebSite" />
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-blue-100">
       {/* Navigation */}
       <Navigation />
 
@@ -19,7 +23,7 @@ export default function Home() {
               <span className="text-blue-600">Investments & Innovation</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Vinu Holdings is a diversified investment company focused on public markets, private equity, and real estate opportunities.
+              Vinu Holdings is a diversified investment company focused on public markets, private equity, and real estate opportunities. With over 5 years of experience, Vinu Holdings has built a strong track record in strategic investments and innovative ventures.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
@@ -153,7 +157,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Vinu Holdings</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We are an emerging investment company with a clear vision: to build great companies through strategic investments, innovative ventures, and real estate development.
+              Vinu Holdings is an emerging investment company with a clear vision: to build great companies through strategic investments, innovative ventures, and real estate development. Founded with the mission to create enduring value, Vinu Holdings has established itself as a trusted partner in the investment community.
             </p>
           </div>
           
@@ -239,6 +243,7 @@ export default function Home() {
 
       {/* Footer */}
       <Footer />
-    </div>
+      </div>
+    </>
   );
 }

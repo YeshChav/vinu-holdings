@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/sections/Footer';
 import StructuredData from '@/components/seo/StructuredData';

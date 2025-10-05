@@ -1,7 +1,7 @@
+import Link from 'next/link';
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/sections/Footer';
 import StructuredData from '@/components/seo/StructuredData';
-import AnimatedCounter from '@/components/ui/AnimatedCounter';
 
 export default function About() {
   return (
@@ -266,18 +266,18 @@ export default function About() {
                 Discover how our patient capital and disciplined approach can help grow your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
+                <Link 
                   href="/#contact" 
                   className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 shadow-lg"
                 >
                   Get in Touch
-                </a>
-                <a 
+                </Link>
+                <Link 
                   href="/#investments" 
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 hover:scale-105 transition-all duration-300"
                 >
                   View Our Investments
-                </a>
+                </Link>
               </div>
             </div>
           </div>

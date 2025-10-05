@@ -2,7 +2,7 @@ import React from 'react';
 
 interface StructuredDataProps {
   type: 'Organization' | 'WebSite' | 'BreadcrumbList';
-  data?: any;
+  data?: unknown;
 }
 
 const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {

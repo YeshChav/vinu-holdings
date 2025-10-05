@@ -108,7 +108,7 @@ export default function Ventures() {
                   <h3 className="text-2xl font-semibold text-slate-900 group-hover:text-orange-600 transition-colors">Café Ventures</h3>
                 </div>
                 <p className="text-slate-600 mb-4">
-                  Expanding into the Italian café market with premium locations, exceptional coffee, and authentic experiences. We're building a network of high-quality coffee shops that serve as community gathering spaces.
+                  Expanding into the Italian café market with premium locations, exceptional coffee, and authentic experiences. We&apos;re building a network of high-quality coffee shops that serve as community gathering spaces.
                 </p>
                 <div className="flex items-center justify-between">
                   <div className="text-sm text-orange-600">
@@ -305,21 +305,21 @@ export default function Ventures() {
             <div className="bg-indigo-600 rounded-2xl p-12 text-center shadow-2xl">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Have a Venture Idea?</h2>
               <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
-                We're always looking for innovative businesses with growth potential. Let's discuss how we can help.
+                We&apos;re always looking for innovative businesses with growth potential. Let&apos;s discuss how we can help.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
+                <Link 
                   href="/#contact" 
                   className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 shadow-lg"
                 >
                   Pitch Your Idea
-                </a>
-                <a 
+                </Link>
+                <Link 
                   href="/about" 
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 hover:scale-105 transition-all duration-300"
                 >
                   Learn More About Us
-                </a>
+                </Link>
               </div>
             </div>
           </div>

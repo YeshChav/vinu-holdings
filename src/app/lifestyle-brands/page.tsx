@@ -1,7 +1,6 @@
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/sections/Footer';
 import StructuredData from '@/components/seo/StructuredData';
-import AnimatedCounter from '@/components/ui/AnimatedCounter';
 
 export default function LifestyleBrands() {
   return (
@@ -340,18 +339,18 @@ export default function LifestyleBrands() {
                 Interested in collaborating on lifestyle brand development or have a brand concept to discuss?
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
+                <Link 
                   href="/#contact" 
                   className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Start a Partnership
-                </a>
-                <a 
+                </Link>
+                <Link 
                   href="/about" 
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
                   Learn More About Us
-                </a>
+                </Link>
               </div>
             </div>
           </div>

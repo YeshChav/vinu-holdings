@@ -22,7 +22,7 @@ const Logo: React.FC<LogoProps> = ({
   
   // Apply color-based styling
   const colorClasses = {
-    gold: 'filter brightness-0 saturate-100',
+    gold: '', // No filter needed - use original golden color from SVG
     white: 'filter brightness-0 invert',
     black: 'filter brightness-0'
   };

@@ -1,27 +1,35 @@
 import Link from 'next/link';
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/sections/Footer';
+import AnimatedCounter from '@/components/ui/AnimatedCounter';
 
 
 export default function CafeVentures() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-100">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-slate-50 to-zinc-50">
       {/* Navigation */}
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-orange-100 rounded-full mb-8">
-              <svg className="w-10 h-10 text-orange-600" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-              </svg>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Café <span className="text-orange-600">Ventures</span>
+      <section className="pt-20 pb-16 relative overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('/images/ventures/cafe-ventures-bg.jpg')`
+          }}
+        ></div>
+        {/* Image Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/70 via-orange-900/60 to-slate-900/70"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(251,146,60,0.1),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(245,158,11,0.1),transparent_50%)]"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-in fade-in slide-in-from-bottom-4 duration-1000 drop-shadow-lg">
+              Café <span className="text-orange-300 bg-gradient-to-r from-orange-300 to-amber-300 bg-clip-text text-transparent">Ventures</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-200 max-w-3xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-200 drop-shadow-md">
               Expanding into the Italian café market with premium locations, exceptional coffee, and authentic experiences that celebrate Italian culture.
             </p>
           </div>
@@ -73,59 +81,126 @@ export default function CafeVentures() {
         </div>
       </section>
 
-      {/* Menu & Experience */}
-      <section className="py-16">
+      {/* Menu & Experience - TEXT LEFT + MEDIA RIGHT */}
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Menu & Experience</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Menu & Experience</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               A carefully curated selection of Italian coffee, pastries, and light meals that transport you to the streets of Rome and Milan.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Coffee Selection</h3>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
-                  Authentic Italian espresso and cappuccino
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
-                  Specialty drinks: Affogato, Macchiato, Cortado
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
-                  Premium single-origin beans from Italy
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
-                  Cold brew and iced coffee options
-                </li>
-              </ul>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
+            <div className="space-y-8">
+              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-lg">
+                <h3 className="text-2xl font-semibold text-slate-900 mb-4">Coffee Selection</h3>
+                <ul className="space-y-3 text-slate-600">
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
+                    Authentic Italian espresso and cappuccino
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
+                    Specialty drinks: Affogato, Macchiato, Cortado
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
+                    Premium single-origin beans from Italy
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
+                    Cold brew and iced coffee options
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-lg">
+                <h3 className="text-2xl font-semibold text-slate-900 mb-4">Food & Pastries</h3>
+                <ul className="space-y-3 text-slate-600">
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></div>
+                    Fresh Italian pastries and croissants
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></div>
+                    Panini and light lunch options
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></div>
+                    Gelato and dessert selection
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></div>
+                    Seasonal specials and local favorites
+                  </li>
+                </ul>
+              </div>
             </div>
             
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Food & Pastries</h3>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></div>
-                  Fresh Italian pastries and croissants
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></div>
-                  Panini and light lunch options
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></div>
-                  Gelato and dessert selection
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></div>
-                  Seasonal specials and local favorites
-                </li>
-              </ul>
+            {/* Media Content */}
+            <div className="relative">
+              <div className="aspect-[4/3] bg-cover bg-center bg-no-repeat rounded-2xl shadow-2xl overflow-hidden">
+                <div 
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                  style={{
+                    backgroundImage: `url('/images/ventures/cafe-interior.jpg')`
+                  }}
+                ></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
+              
+              {/* Video Element */}
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover z-10 rounded-2xl"
+              >
+                <source src="/videos/sections/cafe-experience.mp4" type="video/mp4" />
+              </video>
+              
+              {/* Café Experience Overlay */}
+              <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg z-20">
+                <div className="text-sm font-semibold text-slate-900">Café Experience</div>
+                <div className="text-xs text-slate-600">Italian Authenticity</div>
+              </div>
+              
+              {/* Menu Highlights Overlay */}
+              <div className="absolute bottom-4 left-4 right-4 z-20">
+                <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg">
+                  <h4 className="font-semibold text-slate-900 mb-2">Signature Items</h4>
+                  <div className="grid grid-cols-2 gap-2 text-xs">
+                    <div className="flex items-center">
+                      <div className="w-2 h-2 bg-orange-500 rounded-full mr-2"></div>
+                      <span className="text-slate-600">Espresso</span>
+                    </div>
+                    <div className="flex items-center">
+                      <div className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></div>
+                      <span className="text-slate-600">Pastries</span>
+                    </div>
+                    <div className="flex items-center">
+                      <div className="w-2 h-2 bg-orange-500 rounded-full mr-2"></div>
+                      <span className="text-slate-600">Cappuccino</span>
+                    </div>
+                    <div className="flex items-center">
+                      <div className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></div>
+                      <span className="text-slate-600">Panini</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Video Controls Overlay */}
+              <div className="absolute bottom-4 right-4 z-20">
+                <button className="w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300">
+                  <svg className="w-5 h-5 text-orange-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -184,7 +259,7 @@ export default function CafeVentures() {
                 <div className="text-orange-100">Locations in First Year</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">25%</div>
+                <AnimatedCounter target={25} className="text-3xl font-bold text-white mb-2" suffix="%" />
                 <div className="text-orange-100">Expected ROI by Year 3</div>
               </div>
             </div>

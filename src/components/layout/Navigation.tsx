@@ -26,11 +26,12 @@ export default function Navigation() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center hover:opacity-80 transition-opacity duration-200">
               <Logo 
-                width={300} 
-                height={180} 
+                width={800} 
+                height={320} 
                 variant="full" 
                 color="gold"
-                className="h-36 sm:h-44 md:h-48 lg:h-56 w-auto -ml-2 sm:-ml-3 md:-ml-4 lg:-ml-5"
+                className="h-32 sm:h-40 w-auto"
+                key="nav-gold-logo"
                 />
             </Link>
           </div>
@@ -38,7 +39,23 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-1">
-              {/* Ventures Dropdown */}
+              {/* Home */}
+              <Link 
+                href="/" 
+                className="text-gray-700 hover:text-blue-600 px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 hover:bg-blue-50"
+              >
+                Home
+              </Link>
+              
+              {/* About */}
+              <Link 
+                href="/about" 
+                className="text-gray-700 hover:text-blue-600 px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 hover:bg-blue-50"
+              >
+                About
+              </Link>
+              
+              {/* Investment Portfolio Dropdown */}
               <div 
                 className="relative"
                 onMouseEnter={() => {
@@ -58,7 +75,7 @@ export default function Navigation() {
                 <button
                   className="text-gray-700 hover:text-blue-600 px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 hover:bg-blue-50 flex items-center space-x-1"
                 >
-                  <span>Ventures</span>
+                  <span>Investment Portfolio</span>
                   <svg 
                     className={`w-4 h-4 transition-transform duration-200 ${isVenturesOpen ? 'rotate-180' : ''}`} 
                     fill="none" 
@@ -86,30 +103,64 @@ export default function Navigation() {
                     }}
                   >
                     <Link 
-                      href="/strategic-investments"
-                      className="flex items-center px-4 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors duration-200"
+                      href="/equity-investments"
+                      className="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
                     >
-                      <div className="w-8 h-8 bg-indigo-100 rounded-lg flex items-center justify-center mr-3">
-                        <div className="w-4 h-4 bg-indigo-600 rounded"></div>
+                      <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                        <div className="w-4 h-4 bg-blue-600 rounded"></div>
                       </div>
                       <div>
-                        <div className="font-medium">Strategic Investments</div>
-                        <div className="text-xs text-gray-500">High-potential companies</div>
+                        <div className="font-medium">Equity Investments</div>
+                        <div className="text-xs text-gray-500">Publicly traded companies</div>
                       </div>
                     </Link>
                     
-                    <Link 
-                      href="/cafe-ventures"
-                      className="flex items-center px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors duration-200"
-                    >
-                      <div className="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mr-3">
-                        <div className="w-4 h-4 bg-orange-600 rounded"></div>
+                    <div className="relative group">
+                      <Link 
+                        href="/ventures"
+                        className="flex items-center px-4 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors duration-200"
+                      >
+                        <div className="w-8 h-8 bg-indigo-100 rounded-lg flex items-center justify-center mr-3">
+                          <div className="w-4 h-4 bg-indigo-600 rounded"></div>
+                        </div>
+                        <div className="flex-1">
+                          <div className="font-medium">Ventures</div>
+                          <div className="text-xs text-gray-500">Emerging businesses</div>
+                        </div>
+                        <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
+                      
+                      {/* Sub-dropdown for Ventures */}
+                      <div className="absolute left-full top-0 ml-1 w-56 bg-white rounded-xl shadow-xl border border-gray-100 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <Link 
+                          href="/cafe-ventures"
+                          className="flex items-center px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors duration-200"
+                        >
+                          <div className="w-6 h-6 bg-orange-100 rounded flex items-center justify-center mr-3">
+                            <div className="w-3 h-3 bg-orange-600 rounded"></div>
+                          </div>
+                          <div>
+                            <div className="font-medium">Café Ventures</div>
+                            <div className="text-xs text-gray-500">Italian café market</div>
+                          </div>
+                        </Link>
+                        
+                        <Link 
+                          href="/lifestyle-brands"
+                          className="flex items-center px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors duration-200"
+                        >
+                          <div className="w-6 h-6 bg-purple-100 rounded flex items-center justify-center mr-3">
+                            <div className="w-3 h-3 bg-purple-600 rounded"></div>
+                          </div>
+                          <div>
+                            <div className="font-medium">Lifestyle Brands</div>
+                            <div className="text-xs text-gray-500">Consumer goods</div>
+                          </div>
+                        </Link>
                       </div>
-                      <div>
-                        <div className="font-medium">Café Ventures</div>
-                        <div className="text-xs text-gray-500">Italian café market</div>
-                      </div>
-                    </Link>
+                    </div>
                     
                     <Link 
                       href="/real-estate"
@@ -120,12 +171,21 @@ export default function Navigation() {
                       </div>
                       <div>
                         <div className="font-medium">Real Estate</div>
-                        <div className="text-xs text-gray-500">Premium developments</div>
+                        <div className="text-xs text-gray-500">Cash-flow properties</div>
                       </div>
                     </Link>
                   </div>
                 )}
               </div>
+              
+              
+              {/* Insights */}
+              <Link 
+                href="/#insights" 
+                className="text-gray-700 hover:text-blue-600 px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 hover:bg-blue-50"
+              >
+                Insights
+              </Link>
               
               <Link 
                 href="/#contact" 
@@ -155,32 +215,80 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-100">
+          <div 
+            className="md:hidden bg-white border-t border-gray-100 animate-in slide-in-from-top-2 fade-in duration-300"
+          >
             <div className="px-2 pt-2 pb-3 space-y-1">
-              {/* Mobile Ventures Section */}
+              {/* Mobile Navigation Links */}
+              <Link 
+                href="/" 
+                className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Home
+              </Link>
+              
+              <Link 
+                href="/about" 
+                className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                About
+              </Link>
+              
+              {/* Mobile Investment Portfolio Section */}
               <div className="px-3 py-2">
-                <div className="text-sm font-medium text-gray-500 mb-2">Ventures</div>
+                <div className="text-sm font-medium text-gray-500 mb-2">Investment Portfolio</div>
                 <div className="space-y-1 ml-4">
                   <Link 
-                    href="/strategic-investments"
+                    href="/equity-investments"
+                    className="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    <div className="w-6 h-6 bg-blue-100 rounded flex items-center justify-center mr-3">
+                      <div className="w-3 h-3 bg-blue-600 rounded"></div>
+                    </div>
+                    Equity Investments
+                  </Link>
+                  
+                  <Link 
+                    href="/ventures"
                     className="flex items-center px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors duration-200"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     <div className="w-6 h-6 bg-indigo-100 rounded flex items-center justify-center mr-3">
                       <div className="w-3 h-3 bg-indigo-600 rounded"></div>
                     </div>
-                    Strategic Investments
+                    Ventures
                   </Link>
-                  <Link 
-                    href="/cafe-ventures"
-                    className="flex items-center px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors duration-200"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    <div className="w-6 h-6 bg-orange-100 rounded flex items-center justify-center mr-3">
-                      <div className="w-3 h-3 bg-orange-600 rounded"></div>
+                  
+                  {/* Mobile Ventures Sub-section */}
+                  <div className="px-3 py-2">
+                    <div className="text-xs font-medium text-gray-400 mb-2">Venture Projects</div>
+                    <div className="space-y-1 ml-4">
+                      <Link 
+                        href="/cafe-ventures"
+                        className="flex items-center px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors duration-200"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        <div className="w-5 h-5 bg-orange-100 rounded flex items-center justify-center mr-3">
+                          <div className="w-2 h-2 bg-orange-600 rounded"></div>
+                        </div>
+                        Café Ventures
+                      </Link>
+                      <Link 
+                        href="/lifestyle-brands"
+                        className="flex items-center px-3 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors duration-200"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        <div className="w-5 h-5 bg-purple-100 rounded flex items-center justify-center mr-3">
+                          <div className="w-2 h-2 bg-purple-600 rounded"></div>
+                        </div>
+                        Lifestyle Brands
+                      </Link>
                     </div>
-                    Café Ventures
-                  </Link>
+                  </div>
+                  
                   <Link 
                     href="/real-estate"
                     className="flex items-center px-3 py-2 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg transition-colors duration-200"
@@ -193,6 +301,15 @@ export default function Navigation() {
                   </Link>
                 </div>
               </div>
+              
+              
+              <Link 
+                href="/#insights" 
+                className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Insights
+              </Link>
               
               <Link 
                 href="/#contact" 

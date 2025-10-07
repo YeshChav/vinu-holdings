@@ -15,11 +15,11 @@ const Footer: React.FC = () => {
             <div className="lg:col-span-1">
               <div className="mb-6">
                 <Logo 
-                  width={800} 
-                  height={320} 
+                  width={1600} 
+                  height={640} 
                   variant="full" 
                   color="gold"
-                  className="h-32 sm:h-40 w-auto"
+                  className="h-40 sm:h-56 w-auto"
                   key="footer-gold-logo"
                 />
               </div>

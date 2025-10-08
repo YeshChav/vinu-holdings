@@ -21,11 +21,9 @@ export default function Navigation() {
   }, [hoverTimeout]);
 
   return (
-    <nav className="fixed w-full top-0 z-50 bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 shadow-2xl border-b border-blue-800/30">
+    <nav className="fixed w-full top-0 z-50 bg-black shadow-2xl border-b border-white/20">
       {/* Subtle texture overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-transparent to-blue-900/20 opacity-50"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(59,130,246,0.1),transparent_50%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_50%,rgba(59,130,246,0.1),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-transparent to-purple-600/10 opacity-30"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
@@ -37,7 +35,7 @@ export default function Navigation() {
                 href="/" 
                 className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-200 ${
                   pathname === '/' 
-                    ? 'text-blue-300 bg-white/20 border border-white/30' 
+                    ? 'text-white bg-blue-600 border border-blue-600' 
                     : 'text-white hover:text-blue-300 hover:bg-white/10'
                 }`}
               >
@@ -49,7 +47,7 @@ export default function Navigation() {
                 href="/about" 
                 className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-200 ${
                   pathname === '/about' 
-                    ? 'text-blue-300 bg-white/20 border border-white/30' 
+                    ? 'text-white bg-blue-600 border border-blue-600' 
                     : 'text-white hover:text-blue-300 hover:bg-white/10'
                 }`}
               >
@@ -203,7 +201,7 @@ export default function Navigation() {
                 href="/#insights" 
                 className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-200 ${
                   pathname === '/' && typeof window !== 'undefined' && window.location?.hash === '#insights'
-                    ? 'text-blue-300 bg-white/20 border border-white/30' 
+                    ? 'text-white bg-blue-600 border border-blue-600' 
                     : 'text-white hover:text-blue-300 hover:bg-white/10'
                 }`}
               >
@@ -212,7 +210,7 @@ export default function Navigation() {
               
               <Link 
                 href="/#contact" 
-                className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-2 rounded-lg text-sm font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg text-sm font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 Contact
               </Link>

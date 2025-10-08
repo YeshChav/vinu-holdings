@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <StructuredData type="Organization" />
       <StructuredData type="WebSite" />
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-slate-50 to-zinc-50">
+      <div className="min-h-screen bg-white">
       {/* Navigation */}
       <Navigation />
 
@@ -29,21 +29,21 @@ export default function Home() {
         </video>
         
         {/* Video Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/70 via-indigo-900/50 to-slate-900/70 z-10"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.1),transparent_50%)] z-10"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.1),transparent_50%)] z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-blue-600/50 to-purple-600/70 z-10"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)] z-10"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)] z-10"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-20">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-in fade-in slide-in-from-bottom-4 duration-1000 drop-shadow-lg">
               Building Enduring Value Through<br />
-              <span className="text-indigo-300 bg-gradient-to-r from-indigo-300 to-purple-300 bg-clip-text text-transparent">Investments & Innovation</span>
+              <span className="text-white bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent">Investments & Innovation</span>
             </h1>
-            <p className="text-xl text-slate-200 mb-8 max-w-3xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-200 drop-shadow-md">
+            <p className="text-xl text-white mb-8 max-w-3xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-200 drop-shadow-md">
               Vinu Holdings is a diversified investment company focused on public markets, private ventures, and real estate opportunities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-400">
-              <button className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl backdrop-blur-sm">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl backdrop-blur-sm">
                 Explore Our Portfolio
               </button>
             </div>

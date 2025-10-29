@@ -2,7 +2,6 @@ import Link from 'next/link';
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/sections/Footer';
 import StructuredData from '@/components/seo/StructuredData';
-import AnimatedCounter from '@/components/ui/AnimatedCounter';
 import CheckBadge from '@/components/ui/CheckBadge';
 
 export default function EquityInvestments() {

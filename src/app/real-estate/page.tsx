@@ -67,7 +67,7 @@ export default function RealEstate() {
                 <div className="mb-8 bg-gradient-to-br from-slate-100 via-slate-50 to-blue-50/90 backdrop-blur-sm p-6 rounded-lg shadow-lg">
             <div className="text-lg font-bold text-black mb-4">🚧 Construction in Progress 🚧</div>
             <div className="text-sm text-gray-700 mb-4">
-              We're building something amazing for your real estate needs
+              We&apos;re building something amazing for your real estate needs
             </div>
             
             {/* Progress Bar */}

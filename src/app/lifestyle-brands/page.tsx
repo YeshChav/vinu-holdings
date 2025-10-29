@@ -42,7 +42,7 @@ export default function LifestyleBrands() {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-slate-300 mb-12 font-light tracking-wide">
-            We're crafting something extraordinary for your lifestyle
+            We&apos;re crafting something extraordinary for your lifestyle
           </p>
 
           {/* Progress Indicator */}

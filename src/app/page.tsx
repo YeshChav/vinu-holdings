@@ -23,7 +23,7 @@ export default function Home() {
         {/* Background Video Sequence */}
         <HeroVideo />
         
-        {/* Video Overlay - Removed all tints for clean video background */}
+        {/* Video Overlay - Removed all tints for clean video background - Updated Dec 19, 2024 */}
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-20">
           <div className="text-center">

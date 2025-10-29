@@ -20,16 +20,16 @@ export const SITE_CONFIG = {
   // Logo Configuration
   logo: {
     default: {
-      width: 500,
-      height: 400
+      width: 1000,
+      height: 800
     },
     navigation: {
-      width: 300,
-      height: 180
+      width: 600,
+      height: 360
     },
     footer: {
-      width: 500,
-      height: 400
+      width: 1000,
+      height: 800
     }
   },
 

@@ -18,7 +18,7 @@ const Logo: React.FC<LogoProps> = ({
   color = 'gold',
 }) => {
   // Determine logo source based on variant
-  const logoSrc = variant === 'monogram' ? '/logo.svg' : '/logo.svg';
+  const logoSrc = variant === 'monogram' ? '/vinu-holdings-logo.svg' : '/vinu-holdings-logo.svg';
   
   // Apply color-based styling
   const colorClasses = {

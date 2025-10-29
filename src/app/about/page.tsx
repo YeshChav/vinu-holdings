@@ -2,12 +2,13 @@ import Link from 'next/link';
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/sections/Footer';
 import StructuredData from '@/components/seo/StructuredData';
+import CheckBadge from '@/components/ui/CheckBadge';
 
 export default function About() {
   return (
     <>
       <StructuredData type="Organization" />
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-slate-50 to-zinc-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-slate-100 to-blue-50">
         {/* Navigation */}
         <Navigation />
 
@@ -20,8 +21,8 @@ export default function About() {
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-                About <span className="text-indigo-600 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Vinu Holdings</span>
+              <h1 className="text-4xl md:text-6xl font-bold text-black mb-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+                About <span className="text-brand-blue">Vinu Holdings</span>
               </h1>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-200">
                 Founded with the vision of honoring legacy and creating sustainable growth, Vinu Holdings focuses on long-term value investing across multiple sectors.
@@ -31,7 +32,7 @@ export default function About() {
         </section>
 
         {/* Philosophy Section */}
-        <section className="py-20 bg-white/90 backdrop-blur-sm relative">
+        <section className="py-20 bg-gradient-to-br from-slate-100 via-slate-50 to-blue-50 relative">
           {/* Background Pattern */}
           <div className="absolute inset-0 bg-gradient-to-r from-slate-50 to-indigo-50 opacity-30"></div>
           
@@ -39,38 +40,32 @@ export default function About() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 animate-in fade-in slide-in-from-bottom-4 duration-1000">Our Philosophy</h2>
               <p className="text-xl text-slate-600 max-w-2xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-200">
-                Our philosophy is built on <span className="font-semibold text-indigo-600">patience</span>, <span className="font-semibold text-indigo-600">discipline</span>, and <span className="font-semibold text-indigo-600">trust</span>.
+                Our philosophy is built on <span className="font-semibold text-brand-blue">patience</span>, <span className="font-semibold text-brand-blue">discipline</span>, and <span className="font-semibold text-brand-blue">trust</span>.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-center group">
-                <div className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:bg-indigo-200 transition-colors">
-                  <svg className="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+              <div className="bg-gradient-to-br from-slate-100 via-slate-50 to-blue-50 p-8 rounded-xl shadow-lg hover:shadow-2xl hover:scale-110 hover:bg-brand-gold/20 transition-all duration-300 text-center group cursor-pointer">
+                <div className="flex justify-center mb-6">
+                  <CheckBadge className="group-hover:scale-110 transition-all duration-300" />
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-4 group-hover:text-indigo-600 transition-colors">Patience</h3>
+                <h3 className="text-xl font-semibold text-ink-heading mb-4 group-hover:text-brand-gold group-hover:scale-105 transition-all duration-300">Patience</h3>
                 <p className="text-slate-600">We believe in the power of patient capital, allowing investments to mature and create sustainable value over time.</p>
               </div>
               
-              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-center group">
-                <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:bg-green-200 transition-colors">
-                  <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+              <div className="bg-gradient-to-br from-slate-100 via-slate-50 to-blue-50 p-8 rounded-xl shadow-lg hover:shadow-2xl hover:scale-110 hover:bg-brand-gold/20 transition-all duration-300 text-center group cursor-pointer">
+                <div className="flex justify-center mb-6">
+                  <CheckBadge className="group-hover:scale-110 transition-all duration-300" />
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-4 group-hover:text-green-600 transition-colors">Discipline</h3>
+                <h3 className="text-xl font-semibold text-ink-heading mb-4 group-hover:text-brand-gold group-hover:scale-105 transition-all duration-300">Discipline</h3>
                 <p className="text-slate-600">Our disciplined approach to investment analysis and risk management ensures consistent decision-making.</p>
               </div>
               
-              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-center group">
-                <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:bg-purple-200 transition-colors">
-                  <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
+              <div className="bg-gradient-to-br from-slate-100 via-slate-50 to-blue-50 p-8 rounded-xl shadow-lg hover:shadow-2xl hover:scale-110 hover:bg-brand-gold/20 transition-all duration-300 text-center group cursor-pointer">
+                <div className="flex justify-center mb-6">
+                  <CheckBadge className="group-hover:scale-110 transition-all duration-300" />
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-4 group-hover:text-purple-600 transition-colors">Trust</h3>
+                <h3 className="text-xl font-semibold text-ink-heading mb-4 group-hover:text-brand-gold group-hover:scale-105 transition-all duration-300">Trust</h3>
                 <p className="text-slate-600">We build lasting relationships based on transparency, integrity, and mutual respect with all our partners.</p>
               </div>
             </div>
@@ -122,7 +117,7 @@ export default function About() {
         </section>
 
         {/* Key Stats */}
-        <section className="py-20 bg-white/90 backdrop-blur-sm relative">
+        <section className="py-20 bg-gradient-to-br from-slate-100 via-slate-50 to-blue-50 relative">
           {/* Background Pattern */}
           <div className="absolute inset-0 bg-gradient-to-r from-slate-50 to-indigo-50 opacity-30"></div>
           
@@ -135,44 +130,44 @@ export default function About() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-center group">
-                <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-indigo-200 transition-colors">
-                  <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="bg-gradient-to-br from-slate-100 via-slate-50 to-blue-50 p-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-center group">
+                <div className="w-12 h-12 bg-brand-blue rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-gradient-to-br from-slate-50 via-slate-100 to-blue-50 transition-colors">
+                  <svg className="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">Growing Equity Portfolio</h3>
+                <h3 className="text-lg font-semibold text-slate-900 mb-2 group-hover:text-brand-gold transition-colors">Growing Equity Portfolio</h3>
                 <p className="text-slate-600 text-sm">Strategic investments in high-potential companies</p>
               </div>
               
-              <div className="bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-center group">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200 transition-colors">
-                  <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="bg-gradient-to-br from-slate-100 via-slate-50 to-blue-50 p-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-center group">
+                <div className="w-12 h-12 bg-brand-blue rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-gradient-to-br from-slate-50 via-slate-100 to-blue-50 transition-colors">
+                  <svg className="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-2 group-hover:text-green-600 transition-colors">Diversified Ventures & Real Estate</h3>
+                <h3 className="text-lg font-semibold text-slate-900 mb-2 group-hover:text-brand-gold transition-colors">Diversified Ventures & Real Estate</h3>
                 <p className="text-slate-600 text-sm">Multiple investment channels for balanced growth</p>
               </div>
               
-              <div className="bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-center group">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-200 transition-colors">
-                  <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="bg-gradient-to-br from-slate-100 via-slate-50 to-blue-50 p-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-center group">
+                <div className="w-12 h-12 bg-brand-blue rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-gradient-to-br from-slate-50 via-slate-100 to-blue-50 transition-colors">
+                  <svg className="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-2 group-hover:text-purple-600 transition-colors">Based in Italy</h3>
+                <h3 className="text-lg font-semibold text-slate-900 mb-2 group-hover:text-brand-gold transition-colors">Based in Italy</h3>
                 <p className="text-slate-600 text-sm">Strategic location in Europe for market access</p>
               </div>
               
-              <div className="bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-center group">
-                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-200 transition-colors">
-                  <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="bg-gradient-to-br from-slate-100 via-slate-50 to-blue-50 p-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-center group">
+                <div className="w-12 h-12 bg-brand-blue rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-gradient-to-br from-slate-50 via-slate-100 to-blue-50 transition-colors">
+                  <svg className="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors">Long-term Focused</h3>
+                <h3 className="text-lg font-semibold text-slate-900 mb-2 group-hover:text-brand-gold transition-colors">Long-term Focused</h3>
                 <p className="text-slate-600 text-sm">Patient capital for sustainable value creation</p>
               </div>
             </div>
@@ -180,7 +175,7 @@ export default function About() {
         </section>
 
         {/* Investment Approach */}
-        <section className="py-20 bg-white/50 backdrop-blur-sm">
+        <section className="py-20 bg-gradient-to-br from-slate-100 via-slate-50 to-blue-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Investment Approach</h2>
@@ -192,8 +187,8 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div className="space-y-8">
                 <div className="flex items-start">
-                  <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-4 mt-1">
-                    <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-8 h-8 bg-brand-blue rounded-lg flex items-center justify-center mr-4 mt-1">
+                    <svg className="w-4 h-4 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4" />
                     </svg>
                   </div>
@@ -204,8 +199,8 @@ export default function About() {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-4 mt-1">
-                    <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-8 h-8 bg-brand-blue rounded-lg flex items-center justify-center mr-4 mt-1">
+                    <svg className="w-4 h-4 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4" />
                     </svg>
                   </div>
@@ -216,8 +211,8 @@ export default function About() {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-4 mt-1">
-                    <svg className="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-8 h-8 bg-brand-blue rounded-lg flex items-center justify-center mr-4 mt-1">
+                    <svg className="w-4 h-4 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4" />
                     </svg>
                   </div>
@@ -228,28 +223,38 @@ export default function About() {
                 </div>
               </div>
               
-              <div className="bg-white p-8 rounded-xl shadow-lg">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-6">Why Choose Vinu Holdings?</h3>
+              <div className="bg-gradient-to-br from-slate-50 via-slate-100 to-blue-50 p-8 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group">
+                <h3 className="text-2xl font-semibold text-ink-heading mb-6 group-hover:text-brand-gold transition-colors">Why Choose Vinu Holdings?</h3>
                 <ul className="space-y-4">
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                    <span className="text-gray-600">Proven track record in value investing</span>
+                  <li className="flex items-center gap-4 hover:scale-105 cursor-pointer transition-all duration-300">
+                    <CheckBadge />
+                    <div>
+                      <h4 className="font-semibold text-ink-heading">Proven track record in value investing</h4>
+                    </div>
                   </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                    <span className="text-gray-600">Diversified portfolio across multiple sectors</span>
+                  <li className="flex items-center gap-4 hover:scale-105 cursor-pointer transition-all duration-300">
+                    <CheckBadge />
+                    <div>
+                      <h4 className="font-semibold text-ink-heading">Diversified portfolio across multiple sectors</h4>
+                    </div>
                   </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                    <span className="text-gray-600">Transparent communication and reporting</span>
+                  <li className="flex items-center gap-4 hover:scale-105 cursor-pointer transition-all duration-300">
+                    <CheckBadge />
+                    <div>
+                      <h4 className="font-semibold text-ink-heading">Transparent communication and reporting</h4>
+                    </div>
                   </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                    <span className="text-gray-600">Long-term partnership approach</span>
+                  <li className="flex items-center gap-4 hover:scale-105 cursor-pointer transition-all duration-300">
+                    <CheckBadge />
+                    <div>
+                      <h4 className="font-semibold text-ink-heading">Long-term partnership approach</h4>
+                    </div>
                   </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                    <span className="text-gray-600">Strategic location in Italy</span>
+                  <li className="flex items-center gap-4 hover:scale-105 cursor-pointer transition-all duration-300">
+                    <CheckBadge />
+                    <div>
+                      <h4 className="font-semibold text-ink-heading">Strategic location in Italy</h4>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -260,21 +265,21 @@ export default function About() {
         {/* Contact CTA */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-indigo-600 rounded-2xl p-12 text-center shadow-2xl">
+            <div className="bg-brand-blue rounded-2xl p-12 text-center shadow-2xl">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Partner with Us?</h2>
-              <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Discover how our patient capital and disciplined approach can help grow your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   href="/#contact" 
-                  className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 shadow-lg"
+                  className="bg-gradient-to-br from-slate-50 via-slate-100 to-blue-50 text-brand-blue px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 shadow-lg"
                 >
                   Get in Touch
                 </Link>
                 <Link 
                   href="/#investments" 
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 hover:scale-105 transition-all duration-300"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-gradient-to-br from-slate-50 via-slate-100 to-blue-50 hover:text-brand-blue hover:scale-105 transition-all duration-300"
                 >
                   View Our Investments
                 </Link>

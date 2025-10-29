@@ -21,40 +21,34 @@ export default function Navigation() {
   }, [hoverTimeout]);
 
   return (
-    <nav className="fixed w-full top-0 z-50 bg-black shadow-2xl border-b border-white/20">
-      {/* Subtle texture overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-transparent to-purple-600/10 opacity-30"></div>
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+    <header className="relative z-40">
+      {/* Dark navigation bar with subtle glow */}
+      <div className="fixed w-full top-0 left-0 z-50 bg-black shadow-lg pointer-events-auto">
+        {/* Unified top glowing bar that flows behind the logo */}
+        <div 
+          className="absolute top-0 left-0 w-full h-6 bg-white/80 blur-sm"
+        ></div>
+        <div 
+          className="absolute top-0 left-0 w-full h-4 bg-white"
+        ></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-around items-center h-20 px-4">
           {/* Left Navigation Links */}
-          <div className="hidden md:block">
-            <div className="flex items-center space-x-8">
+               <div className="hidden md:block -ml-16">
+                 <div className="flex items-center space-x-12">
               {/* Home */}
               <Link 
                 href="/" 
-                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-200 ${
-                  pathname === '/' 
-                    ? 'text-white bg-blue-600 border border-blue-600' 
-                    : 'text-white hover:text-blue-300 hover:bg-white/10'
+                className={`text-sm font-medium transition-colors duration-200 ${
+                       pathname === '/' 
+                         ? 'text-brand-gold' 
+                         : 'text-white hover:text-brand-gold'
                 }`}
               >
-                Home
+                HOME
               </Link>
               
-              {/* About */}
-              <Link 
-                href="/about" 
-                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-200 ${
-                  pathname === '/about' 
-                    ? 'text-white bg-blue-600 border border-blue-600' 
-                    : 'text-white hover:text-blue-300 hover:bg-white/10'
-                }`}
-              >
-                About
-              </Link>
-              
-              {/* Investment Portfolio Dropdown */}
+              {/* Services Dropdown */}
               <div 
                 className="relative"
                 onMouseEnter={() => {
@@ -72,9 +66,9 @@ export default function Navigation() {
                 }}
               >
                 <button
-                  className="text-white hover:text-blue-300 px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-200 hover:bg-white/10 flex items-center space-x-1"
+                       className="text-white hover:text-brand-gold text-sm font-medium transition-colors duration-200 flex items-center space-x-1"
                 >
-                  <span>Investment Portfolio</span>
+                  <span>SERVICES</span>
                   <svg 
                     className={`w-4 h-4 transition-transform duration-200 ${isVenturesOpen ? 'rotate-180' : ''}`} 
                     fill="none" 
@@ -103,11 +97,8 @@ export default function Navigation() {
                   >
                     <Link 
                       href="/equity-investments"
-                      className="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
+                      className="flex items-center px-4 py-3 text-gray-700 hover:bg-brand-gold/10 hover:text-brand-gold transition-colors duration-200"
                     >
-                      <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
-                        <div className="w-4 h-4 bg-blue-600 rounded"></div>
-                      </div>
                       <div>
                         <div className="font-medium">Equity Investments</div>
                         <div className="text-xs text-gray-500">Publicly traded companies</div>
@@ -117,11 +108,8 @@ export default function Navigation() {
                     <div className="relative group">
                       <Link 
                         href="/ventures"
-                        className="flex items-center px-4 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors duration-200"
+                        className="flex items-center px-4 py-3 text-gray-700 hover:bg-brand-gold/10 hover:text-brand-gold transition-colors duration-200"
                       >
-                        <div className="w-8 h-8 bg-indigo-100 rounded-lg flex items-center justify-center mr-3">
-                          <div className="w-4 h-4 bg-indigo-600 rounded"></div>
-                        </div>
                         <div className="flex-1">
                           <div className="font-medium">Ventures</div>
                           <div className="text-xs text-gray-500">Emerging businesses</div>
@@ -135,11 +123,8 @@ export default function Navigation() {
                       <div className="absolute left-full top-0 ml-1 w-56 bg-white rounded-xl shadow-xl border border-gray-100 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                     <Link 
                       href="/cafe-ventures"
-                      className="flex items-center px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors duration-200"
+                      className="flex items-center px-4 py-3 text-gray-700 hover:bg-brand-gold/10 hover:text-brand-gold transition-colors duration-200"
                     >
-                          <div className="w-6 h-6 bg-orange-100 rounded flex items-center justify-center mr-3">
-                            <div className="w-3 h-3 bg-orange-600 rounded"></div>
-                      </div>
                       <div>
                         <div className="font-medium">Café Ventures</div>
                         <div className="text-xs text-gray-500">Italian café market</div>
@@ -148,11 +133,8 @@ export default function Navigation() {
                         
                         <Link 
                           href="/lifestyle-brands"
-                          className="flex items-center px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors duration-200"
+                          className="flex items-center px-4 py-3 text-gray-700 hover:bg-brand-gold/10 hover:text-brand-gold transition-colors duration-200"
                         >
-                          <div className="w-6 h-6 bg-purple-100 rounded flex items-center justify-center mr-3">
-                            <div className="w-3 h-3 bg-purple-600 rounded"></div>
-                          </div>
                           <div>
                             <div className="font-medium">Lifestyle Brands</div>
                             <div className="text-xs text-gray-500">Consumer goods</div>
@@ -163,11 +145,8 @@ export default function Navigation() {
                     
                     <Link 
                       href="/real-estate"
-                      className="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors duration-200"
+                      className="flex items-center px-4 py-3 text-gray-700 hover:bg-brand-gold/10 hover:text-brand-gold transition-colors duration-200"
                     >
-                      <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3">
-                        <div className="w-4 h-4 bg-green-600 rounded"></div>
-                      </div>
                       <div>
                         <div className="font-medium">Real Estate</div>
                         <div className="text-xs text-gray-500">Cash-flow properties</div>
@@ -179,40 +158,28 @@ export default function Navigation() {
             </div>
           </div>
 
-          {/* Central Logo Section */}
+          {/* Central Logo Section - Empty space for white polygon logo */}
           <div className="flex items-center justify-center flex-1 md:pointer-events-none md:absolute md:left-1/2 md:-translate-x-1/2 md:inset-y-0">
-            <Link href="/" className="relative flex items-center hover:opacity-90 transition-opacity duration-200">
-              <Logo 
-                width={1600} 
-                height={640} 
-                variant="full" 
-                color="gold"
-                className="h-40 sm:h-56 w-auto"
-                key="nav-gold-logo"
-              />
-            </Link>
+            {/* Logo removed - only white polygon logo will show */}
           </div>
 
           {/* Right Navigation Links */}
-          <div className="hidden md:block">
-            <div className="flex items-center space-x-8">
-              {/* Insights */}
+               <div className="hidden md:block -mr-16">
+                 <div className="flex items-center space-x-12">
+              {/* About Us */}
               <Link 
-                href="/#insights" 
-                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-200 ${
-                  pathname === '/' && typeof window !== 'undefined' && window.location?.hash === '#insights'
-                    ? 'text-white bg-blue-600 border border-blue-600' 
-                    : 'text-white hover:text-blue-300 hover:bg-white/10'
-                }`}
+                     href="/about" 
+                     className="text-sm font-medium text-white hover:text-brand-gold transition-colors duration-200"
               >
-                Insights
+                ABOUT US
               </Link>
               
+              {/* Contact */}
               <Link 
-                href="/#contact" 
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg text-sm font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+                     href="/contact" 
+                     className="text-sm font-medium text-white hover:text-brand-gold transition-colors duration-200"
               >
-                Contact
+                CONTACT
               </Link>
             </div>
           </div>
@@ -221,7 +188,7 @@ export default function Navigation() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-white hover:text-blue-300 p-2 rounded-lg transition-colors duration-200 hover:bg-white/10"
+              className="text-white hover:text-brand-gold p-2 rounded-lg transition-colors duration-200 hover:bg-white/10"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {isMobileMenuOpen ? (
@@ -237,13 +204,13 @@ export default function Navigation() {
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div 
-            className="md:hidden bg-gradient-to-b from-slate-900 to-blue-900 border-t border-blue-800/30 animate-in slide-in-from-top-2 fade-in duration-300"
+            className="md:hidden bg-gradient-to-b from-slate-900 to-slate-800 border-t border-slate-700/30 animate-in slide-in-from-top-2 fade-in duration-300"
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
               {/* Mobile Navigation Links */}
               <Link 
                 href="/" 
-                className="block px-3 py-2 text-white hover:text-blue-300 hover:bg-white/10 rounded-lg transition-colors duration-200"
+                className="block px-3 py-2 text-white hover:text-brand-gold hover:bg-white/10 rounded-lg transition-colors duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Home
@@ -251,35 +218,29 @@ export default function Navigation() {
               
               <Link 
                 href="/about" 
-                className="block px-3 py-2 text-white hover:text-blue-300 hover:bg-white/10 rounded-lg transition-colors duration-200"
+                className="block px-3 py-2 text-white hover:text-brand-gold hover:bg-white/10 rounded-lg transition-colors duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                About
+                About Us
               </Link>
               
-              {/* Mobile Investment Portfolio Section */}
+              {/* Mobile Services Section */}
               <div className="px-3 py-2">
-                <div className="text-sm font-medium text-blue-300 mb-2">Investment Portfolio</div>
+                <div className="text-sm font-medium text-brand-gold mb-2">Services</div>
                 <div className="space-y-1 ml-4">
                   <Link 
                     href="/equity-investments"
-                    className="flex items-center px-3 py-2 text-white hover:text-blue-300 hover:bg-white/10 rounded-lg transition-colors duration-200"
+                    className="flex items-center px-3 py-2 text-white hover:text-brand-gold hover:bg-white/10 rounded-lg transition-colors duration-200"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    <div className="w-6 h-6 bg-blue-500/20 rounded flex items-center justify-center mr-3">
-                      <div className="w-3 h-3 bg-blue-400 rounded"></div>
-                    </div>
                     Equity Investments
                   </Link>
                   
                   <Link 
                     href="/ventures"
-                    className="flex items-center px-3 py-2 text-white hover:text-indigo-300 hover:bg-white/10 rounded-lg transition-colors duration-200"
+                    className="flex items-center px-3 py-2 text-white hover:text-brand-gold hover:bg-white/10 rounded-lg transition-colors duration-200"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    <div className="w-6 h-6 bg-indigo-500/20 rounded flex items-center justify-center mr-3">
-                      <div className="w-3 h-3 bg-indigo-400 rounded"></div>
-                    </div>
                     Ventures
                   </Link>
                   
@@ -289,22 +250,16 @@ export default function Navigation() {
                     <div className="space-y-1 ml-4">
                       <Link 
                         href="/cafe-ventures"
-                        className="flex items-center px-3 py-2 text-white hover:text-orange-300 hover:bg-white/10 rounded-lg transition-colors duration-200"
+                        className="flex items-center px-3 py-2 text-white hover:text-brand-gold hover:bg-white/10 rounded-lg transition-colors duration-200"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        <div className="w-5 h-5 bg-orange-500/20 rounded flex items-center justify-center mr-3">
-                          <div className="w-2 h-2 bg-orange-400 rounded"></div>
-                        </div>
                         Café Ventures
                       </Link>
                       <Link 
                         href="/lifestyle-brands"
-                        className="flex items-center px-3 py-2 text-white hover:text-purple-300 hover:bg-white/10 rounded-lg transition-colors duration-200"
+                        className="flex items-center px-3 py-2 text-white hover:text-brand-gold hover:bg-white/10 rounded-lg transition-colors duration-200"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        <div className="w-5 h-5 bg-purple-500/20 rounded flex items-center justify-center mr-3">
-                          <div className="w-2 h-2 bg-purple-400 rounded"></div>
-                        </div>
                         Lifestyle Brands
                       </Link>
                     </div>
@@ -312,28 +267,16 @@ export default function Navigation() {
                   
                   <Link 
                     href="/real-estate"
-                    className="flex items-center px-3 py-2 text-white hover:text-green-300 hover:bg-white/10 rounded-lg transition-colors duration-200"
+                    className="flex items-center px-3 py-2 text-white hover:text-brand-gold hover:bg-white/10 rounded-lg transition-colors duration-200"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    <div className="w-6 h-6 bg-green-500/20 rounded flex items-center justify-center mr-3">
-                      <div className="w-3 h-3 bg-green-400 rounded"></div>
-                    </div>
                     Real Estate
                   </Link>
                 </div>
               </div>
               
-              
               <Link 
-                href="/#insights" 
-                className="block px-3 py-2 text-white hover:text-blue-300 hover:bg-white/10 rounded-lg transition-colors duration-200"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Insights
-              </Link>
-              
-              <Link 
-                href="/#contact" 
+                href="/contact" 
                 className="block px-3 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -342,7 +285,64 @@ export default function Navigation() {
             </div>
           </div>
         )}
+        </div>
       </div>
-    </nav>
+
+      {/* White polygon notch (centered) - positioned above the glowing bar */}
+      <div
+        className="absolute left-1/2 -translate-x-1/2 -top-4 md:-top-6
+                   bg-white shadow-[0_8px_24px_rgba(0,0,0,.15)]
+                   flex items-center justify-center
+                   z-[70]"
+        style={{
+          clipPath: "polygon(12% 0%, 88% 0%, 100% 42%, 88% 100%, 12% 100%, 0% 42%)",
+          width: "min(48vw, 420px)",
+          height: "85px",
+        }}
+      >
+        <Link href="/" className="hover:opacity-90 transition-opacity duration-200 flex items-center justify-center w-full h-full">
+            <Logo 
+              width={3200} 
+              height={1280} 
+              variant="full" 
+              color="gold"
+              className="h-20 md:h-27 w-auto mt-5.5 ml-15"
+              key="nav-white-logo"
+            />
+        </Link>
+      </div>
+
+      {/* Left glowing line extending from behind the logo to screen edge */}
+      <div 
+        className="absolute top-0 left-0 z-40"
+        style={{
+          right: `calc(50% + min(54vw, 480px) * 0.42)`,
+          height: '18px',
+        }}
+      >
+        <div 
+          className="w-full h-full bg-gradient-to-r from-white via-white to-white/80 shadow-lg shadow-white/50"
+          style={{
+            borderRadius: '0 18px 18px 0',
+          }}
+        ></div>
+      </div>
+
+      {/* Right glowing line extending from behind the logo to screen edge */}
+      <div 
+        className="absolute top-0 right-0 z-40"
+        style={{
+          left: `calc(50% - min(54vw, 480px) * 0.42)`,
+          height: '18px',
+        }}
+      >
+        <div 
+          className="w-full h-full bg-gradient-to-l from-white via-white to-white/80 shadow-lg shadow-white/50"
+          style={{
+            borderRadius: '18px 0 0 18px',
+          }}
+        ></div>
+      </div>
+    </header>
   );
 }

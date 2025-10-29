@@ -13,13 +13,13 @@ const Footer: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Company Info - Left Column */}
             <div className="lg:col-span-1">
-              <div className="mb-6">
+              <div className="mb-3">
                 <Logo 
                   width={1600} 
                   height={640} 
                   variant="full" 
                   color="gold"
-                  className="h-40 sm:h-56 w-auto"
+                  className="h-28 sm:h-36 w-auto"
                   key="footer-gold-logo"
                 />
               </div>

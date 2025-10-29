@@ -54,7 +54,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                   href={primaryButton.href}
                   variant="primary"
                   size="lg"
-                  className="bg-yellow-500 hover:bg-yellow-600"
+                  className="bg-blue-500 hover:bg-blue-600"
                 >
                   {primaryButton.text}
                 </Button>
